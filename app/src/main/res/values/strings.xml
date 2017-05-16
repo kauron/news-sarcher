@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name" translatable="false">News SARcher</string>
+    <string name="title_activity_settings">Settings</string>
+    <string name="default_endpoint" translatable="false">kauron.ddns.net</string>
+    <string name="date_search" translatable="false">date:</string>
+    <string name="and_search" translatable="false">AND</string>
+    <string name="not_search" translatable="false">NOT</string>
+    <string name="or_search" translatable="false">OR</string>
+    <string name="category_search" translatable="false">category:</string>
+    <string name="headline_search" translatable="false">headline:</string>
+    <string name="query">Query</string>
+    <string name="remove_stopwords">Remove stopwords</string>
+    <string name="stemming">Stemming</string>
+    <string name="asterisk" translatable="false">*</string>
+    <string name="question_mark" translatable="false">\?</string>
+    <string name="no_answer_yet">The answer hasn\'t arrived yet</string>
+    <string name="close">Close</string>
+    <string name="copy_query">Copy query</string>
+    <string name="click_to_see_the_result_long_click_to_copy">Touch to see the full result</string>
+    <string name="search">Search</string>
+    <string name="settings">Settings</string>
+</resources>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="click_to_see_the_result_long_click_to_copy">Toqueu per a veure els detalls</string>
+    <string name="close">Tancar</string>
+    <string name="copy_query">Copiar</string>
+    <string name="query">Pregunta</string>
+    <string name="no_answer_yet">La resposta encara no ha arribat</string>
+    <string name="remove_stopwords">Quitar paraules freqüents</string>
+    <string name="search">Buscar</string>
+    <string name="settings">Ajustos</string>
+    <string name="title_activity_settings">Ajustos</string>
+    <string name="stemming">Buscar també derivats</string>
+</resources>

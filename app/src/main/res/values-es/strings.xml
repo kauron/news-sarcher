@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="close">Cerrar</string>
+    <string name="copy_query">Copiar consulta</string>
+    <string name="no_answer_yet">La respuesta aún no ha llegado</string>
+    <string name="query">Consulta</string>
+    <string name="remove_stopwords">Quitar palabras frecuentes</string>
+    <string name="search">Buscar</string>
+    <string name="settings">Ajustes</string>
+    <string name="stemming">Buscar también derivados</string>
+    <string name="title_activity_settings">Ajustes</string>
+    <string name="click_to_see_the_result_long_click_to_copy">Toca para ver detalles</string>
+</resources>
