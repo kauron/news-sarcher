@@ -1,5 +1,6 @@
 package com.kauron.newssarcher;
 
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -23,6 +24,11 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
@@ -35,6 +41,38 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        final Context context = this;
+
+        FirebaseDatabase db = FirebaseDatabase.getInstance();
+        final String TAG = "TAG";
+        db.getReference("server_url").addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                // This method is called once with the initial value and again
+                // whenever data at this location is updated.
+                PreferenceManager.getDefaultSharedPreferences(context).edit()
+                        .putString("pref_endpoint", dataSnapshot.getValue(String.class)).apply();
+            }
+
+            @Override
+            public void onCancelled(DatabaseError error) {
+                // Failed to read value
+            }
+        });
+        db.getReference("server_port").addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                PreferenceManager.getDefaultSharedPreferences(context).edit()
+                        .putString("pref_port", String.valueOf(dataSnapshot.getValue(Integer.class)))
+                        .apply();
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+                // Failed to read value
+            }
+        });
+
 
         queries = new ArrayList<>();
         ListView listView = (ListView) findViewById(R.id.listView);
